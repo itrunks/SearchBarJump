@@ -12,6 +12,8 @@
     NSInteger _rows;
 }
 
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+
 @end
 
 @implementation TableViewController
@@ -31,12 +33,30 @@
 
     _rows = 3;
     
-    [self hideSearchBar];
+   // [self hideSearchBar];
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+     [super viewWillAppear:animated];
+  
+     //[self.tableView setContentOffset:CGPointMake(0,44) animated:NO];
+    // self.tableView.tableHeaderView = self.searchBar;
+   
+ 
+}
+
+-(void)viewDidDisappear:(BOOL)animated{
+    
+      //self.tableView.tableHeaderView = nil;
+    //[self.tableView.tableHeaderView removeFromSuperview];
+    [self.tableView setContentInset:UIEdgeInsetsMake(-0.5, 0, 0, 0)];
+    
+    [super viewDidAppear:animated];
 }
 
 - (void)hideSearchBar {
     // hide search bar
-    [self.tableView setContentOffset:CGPointMake(0.0, self.tableView.tableHeaderView.frame.size.height) animated:NO];
+    [self.tableView setContentOffset:CGPointMake(0,44) animated:NO];
 }
 
 - (IBAction)toggleCount:(UIBarButtonItem *)sender {

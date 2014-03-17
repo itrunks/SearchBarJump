@@ -7,7 +7,7 @@
         <!--Table View Controller - TVC-->
         <scene sceneID="w0N-P8-N4A">
             <objects>
-                <tableViewController hidesBottomBarWhenPushed="YES" id="GUz-HA-Yi3" customClass="TableViewController" sceneMemberID="viewController">
+                <tableViewController id="GUz-HA-Yi3" customClass="TableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Pz6-q9-gcR">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -48,6 +48,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchBar" destination="gAR-lt-yoP" id="b8S-iy-B1w"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJF-1j-Vk0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,10 +65,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Gmh-Cm-4vl"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="bCx-gP-qCj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" title="VC" id="rf6-o8-4A8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omp-XJ-lYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -76,9 +80,10 @@
         <scene sceneID="dxK-5m-xRg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tgk-2X-wAf" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <tabBarItem key="tabBarItem" title="Item" id="TLo-YO-WoN"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tVP-zb-u1m">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tVP-zb-u1m">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -94,7 +99,8 @@
         <!--Tab Bar Controller-->
         <scene sceneID="caA-QD-DpR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qVF-Yp-g0c" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="qVF-Yp-g0c" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="rwl-ju-Q9q">
