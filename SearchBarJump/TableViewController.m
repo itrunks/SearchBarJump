@@ -39,7 +39,7 @@
 -(void)viewWillAppear:(BOOL)animated{
      [super viewWillAppear:animated];
   
-     //[self.tableView setContentOffset:CGPointMake(0,44) animated:NO];
+     [self.tableView setContentOffset:CGPointMake(0,44) animated:NO];
     // self.tableView.tableHeaderView = self.searchBar;
    
  
@@ -49,7 +49,7 @@
     
       //self.tableView.tableHeaderView = nil;
     //[self.tableView.tableHeaderView removeFromSuperview];
-    [self.tableView setContentInset:UIEdgeInsetsMake(-0.5, 0, 0, 0)];
+    [self.tableView setContentInset:UIEdgeInsetsMake(-0.3, 0, 0, 0)];
     
     [super viewDidAppear:animated];
 }
